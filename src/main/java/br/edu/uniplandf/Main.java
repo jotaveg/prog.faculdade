@@ -106,3 +106,42 @@ class Cachorro{
         System.out.println("Hoje, "+ diaHoje + " o vizinho");
     }
 }
+
+class Calculadora{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Escolha o primeiro número");
+        int num1 = scanner.nextInt();
+        System.out.println("Escolha o operador");
+        char op = scanner.next().charAt(0);
+        System.out.println("Escolha o segundo número");
+        int num2 = scanner.nextInt();
+
+        switch (op){
+            case '+':
+                System.out.println("Resultado: ");
+                System.out.println(num1 + num2);
+                break;
+                case '-':
+                    System.out.println("Resultado: ");
+                            System.out.println(num1 - num2);
+                    break;
+                    case '*':
+                        System.out.println("Resultado: ");
+                        System.out.println(num1 * num2);
+                        break;
+                        case '/':
+                            System.out.println("Resultado: ");
+                            System.out.println(num1 / num2);
+                            break;
+                            case '%':
+                                System.out.println("Resultado: ");
+                                System.out.println(num1 % num2);
+                                break;
+            default:
+                System.out.println("Operador inválido, tente denovo");
+
+        }
+
+    }
+}
