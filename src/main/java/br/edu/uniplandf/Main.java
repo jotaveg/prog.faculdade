@@ -71,17 +71,17 @@ class Score{
 
         int[] subject= {85,92,78,88,81};
         int score = subject[0];
-        char grade = 'D';
+        char nota = 'D';
         if (score>=90){
-            grade = 'A';
+            nota = 'A';
         }else if (score>=80){
-            grade = 'B';
+            nota = 'B';
         }else if (score>=70){
-            grade = 'C';
+            nota = 'C';
         }else if (score<70){
-            grade = 'F';
+            nota = 'F';
         }
-        System.out.println("Your grade: " + grade);
+        System.out.println("Sua nota: " + nota);
 
 
         for(int i = 0;i<subject.length;i++){
@@ -143,5 +143,17 @@ class Calculadora{
 
         }
 
+    }
+}
+
+class Oraculo{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Eu sou o oráculo, diga a sua dúvida");
+                String pergunta = scanner.nextLine();
+                String[] respostas = {"Tudo indica que sim", "Não, jamais", "Açúcar em cubos", "Sem dúvidas, sim", "Sem dúvidas, não", "Eu não faria isso", "microondas eletrolux", "Talvez sim, Talvez não"};
+                int gerarResposta = (int) (Math.random()*respostas.length);
+                System.out.println(respostas[gerarResposta]);
+                scanner.close();
     }
 }
