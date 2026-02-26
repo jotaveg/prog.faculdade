@@ -157,3 +157,16 @@ class Oraculo{
                 scanner.close();
     }
 }
+
+class Vidente{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Eu vou advinhar a sua idade em apenas dois passos");
+        System.out.println("Primeiro eu quero que você pegue sua idade e multiplique por 10");
+                int idade = scanner.nextInt();
+                System.out.println("Agora eu quero que você me conte sua idade");
+                        int menteAi = scanner.nextInt();
+                System.out.println("Sua idade é: "+ idade/10);
+
+    }
+}
