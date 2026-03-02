@@ -65,7 +65,7 @@ class ArraysExample{
         System.out.println("Smallest: " + smallest);
     }
 }
-
+//teste
 class Score{
     public static void main(String[] args) {
 
