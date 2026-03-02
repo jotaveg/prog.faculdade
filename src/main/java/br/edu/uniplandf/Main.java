@@ -1,5 +1,6 @@
 package br.edu.uniplandf;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -8,8 +9,11 @@ public class Main {
 
 class OperatorsTest{
     public static void main(String[] args){
-        int price = 25;
-        int quantity = 4;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Type in a price");
+        int price = scanner.nextInt();
+        System.out.println("Type in a quantity");
+        int quantity = scanner.nextInt();
         int calculus = price*quantity;
         boolean check = calculus>150;
         System.out.println("price * quantity = "+ calculus);
@@ -19,7 +23,9 @@ class OperatorsTest{
 
 class ThermometerTest {
     public static void main(String[] args){
-        int temperature = 13;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Temperature: ");
+        int temperature = scanner.nextInt();
 
         if (temperature >=30){
             System.out.println("It's hot");
@@ -68,29 +74,32 @@ class ArraysExample{
 //teste
 class Score{
     public static void main(String[] args) {
-
-        int[] subject= {85,92,78,88,81};
-        int score = subject[0];
-        char nota = 'D';
-        if (score>=90){
-            nota = 'A';
-        }else if (score>=80){
-            nota = 'B';
-        }else if (score>=70){
-            nota = 'C';
-        }else if (score<70){
-            nota = 'F';
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Digite suas notas em sequência (5 notas)");
+        int[] notas ={0,0,0,0,0};
+        for (int i = 0;i<5;i++){
+            System.out.println("Digite a nota "+ i);
+            notas[i] = scanner.nextInt();
         }
-        System.out.println("Sua nota: " + nota);
+        int score = notas[0];
+        char[] nota = {'D','D','D','D','D'};
 
-
-        for(int i = 0;i<subject.length;i++){
-            if(score<70){
-                System.out.println();
+        for (int i = 0;i<notas.length;i++) {
+            score = notas[i];
+            if (score >= 90) {
+                nota[i] = 'A';
+            } else if (score >= 80) {
+                nota[i] = 'B';
+            } else if (score >= 70) {
+                nota[i] = 'C';
+            } else if (score < 70) {
+                nota[i] = 'F';
             }
         }
+        System.out.println("Suas nota: " + Arrays.toString(nota));
+
+        }
     }
-}
 
 class Cachorro{
     public static void main(String[] args) {
@@ -168,5 +177,18 @@ class Vidente{
                         int menteAi = scanner.nextInt();
                 System.out.println("Sua idade é: "+ idade/10);
 
+    }
+}
+
+class Cadastro{
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Informe sua matrícula");
+        long matricula = scanner.nextLong();
+        System.out.println("Informe seu nome");
+        String nome = scanner.next();
+
+        System.out.println("Você é o aluno "+nome+" de matrícula "+matricula);
+        scanner.close();
     }
 }
