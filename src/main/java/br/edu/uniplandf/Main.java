@@ -8,15 +8,25 @@ public class Main {
     }
 }
 
+class Teste{
+    public static void main(String[] args) {
+        Estudante estudante = new Estudante();
+        estudante.nome = "Pedro";
+        estudante.matricula = "12345";
+        System.out.println("nome: "+estudante.nome);
+    }
+}
+
 class Cadastro{
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
+        Estudante aluno = new Estudante();
         System.out.println("Informe sua matrícula");
-        long matricula = scanner.nextLong();
+        aluno.matricula = scanner.next();
         System.out.println("Informe seu nome");
-        String nome = scanner.next();
+        aluno.nome = scanner.next();
 
-        System.out.println("Você é o aluno "+nome+" de matrícula "+matricula);
+        System.out.println("Você é o aluno "+aluno.nome+" de matrícula "+aluno.matricula);
         scanner.close();
     }
 }
