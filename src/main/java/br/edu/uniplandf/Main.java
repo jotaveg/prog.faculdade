@@ -27,6 +27,7 @@ class Cadastro{
         aluno.nome = scanner.next();
 
         System.out.println("Você é o aluno "+aluno.nome+" de matrícula "+aluno.matricula);
+        aluno.saudacoes(aluno.nome);
         scanner.close();
     }
 }
