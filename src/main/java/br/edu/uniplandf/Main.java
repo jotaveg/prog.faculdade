@@ -78,7 +78,7 @@ class Score{
         System.out.println("Digite suas notas em sequência (5 notas)");
         int[] notas ={0,0,0,0,0};
         for (int i = 0;i<5;i++){
-            System.out.println("Digite a nota "+ i);
+            System.out.println("Digite a nota "+ (i+1));
             notas[i] = scanner.nextInt();
         }
         int score = notas[0];
